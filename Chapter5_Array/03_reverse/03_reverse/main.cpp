@@ -19,7 +19,21 @@ int main(int argc, const char * argv[]) {
         end--;
     }
     for (int i = 0; i < sizeof(arr)/sizeof(arr[0]);i++){
-        cout<<arr[i]<<endl;
+        cout<<arr[i]<<"\t";
     }
+    cout<<endl;
+    int start = 0;
+    end = (sizeof(arr)/sizeof(arr[0]))-1;
+    while (start<end){
+        temp=arr[start];
+        arr[start]=arr[end];
+        arr[end]=temp;
+        start++;
+        end--;
+    }
+    for (int i = 0; i < sizeof(arr)/sizeof(arr[0]);i++){
+        cout<<arr[i]<<"\t";
+    }
+    cout<<endl;
     return 0;
 }
